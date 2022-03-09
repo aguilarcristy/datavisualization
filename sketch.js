@@ -10,7 +10,8 @@ let rc = 20;
 let gc = 100;
 let bc = 250;
 
-let wrds;
+let nombres;
+let statements;
 
 function setup() {
   createCanvas(400, 400);
@@ -30,11 +31,14 @@ function draw() {
 function mousePressed() {
   mr = int(random(name.length));
   br = int(random(question.length));
-  wrds = name[mr]  + ' ' + question[br] + '.';
+  //nombres = name[mr]  + ' ' + question[br] + '.';
+  nombres = name[mr];
+  statements = question[mr];
   rc = random(255);
   bc = random(255);
   fortText();
-  console.log(wrds);
+  console.log(nombres);
+  console.log(statements);
 }
 
 function fortBall() {
@@ -58,6 +62,7 @@ function fortBall2() {
 function intText() {
   fill(255);
   textAlign(TOP);
+  //this is a lie, you can click anywhere
   text('Women who deserved to live', 130, 30);
 }
 
@@ -69,5 +74,6 @@ function fortText() {
   textAlign(BOTTOM);
   text('Rest in Peace', 160, 315);
   textAlign(BOTTOM);
-  text(wrds, 70, 350);
+  text(nombres, 150, 350);
+  text(statements, 130, 370);
 }
