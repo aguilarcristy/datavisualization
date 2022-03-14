@@ -1,5 +1,22 @@
-let name = ['Ingrid Escadilla', 'Alicia Cortes', 'Mariana Lima', 'Maria Fernanda Rico Vargas', 'Lesvy Berlin Osorio', 'Fernanda Castilla Miranda', 'Abigail Guerrero Mondragon', 'Isabel Cabanillas de la Torre '];
-let question = ['When will this stop?', 'No more deaths', 'Hold men accountable', 'Protect our women', 'Women are deserving of life', 'Machismo kills', 'No more femicides'];
+let name = [
+  "Ingrid Escadilla",
+  "Alicia Cortes",
+  "Mariana Lima",
+  "Maria Fernanda Rico Vargas",
+  "Lesvy Berlin Osorio",
+  "Fernanda Castilla Miranda",
+  "Abigail Guerrero Mondragon",
+  "Isabel Cabanillas de la Torre",
+];
+let question = [
+  "When will this stop?",
+  "No more deaths",
+  "Hold men accountable",
+  "Protect our women",
+  "Women are deserving of life",
+  "Machismo kills",
+  "No more femicides",
+];
 
 let mr;
 let gr;
@@ -22,10 +39,13 @@ function setup() {
   console.log(name[int(random(name.length))]);
   // random whole number list of moods :DD
   console.log(question.length);
-
 }
 
 function draw() {
+
+ drawVenusLeft();
+ drawVenusRight();
+
 }
 
 function mousePressed() {
@@ -52,7 +72,7 @@ function fortBall() {
 
 function fortRect() {
   fill(rc, gc, bc);
-  rect(width*0.5,height*0.5, 100);
+  rect(width * 0.5, height * 0.5, 100);
 }
 
 function fortBall2() {
@@ -63,7 +83,7 @@ function intText() {
   fill(255);
   textAlign(TOP);
   //this is a lie, you can click anywhere
-  text('Women who deserved to live', 130, 30);
+  text("Women who deserved to live", 130, 30);
 }
 
 function fortText() {
@@ -72,8 +92,37 @@ function fortText() {
   fortBall();
   fill(255);
   textAlign(BOTTOM);
-  text('Rest in Peace', 160, 315);
+  text("Rest in Peace", 160, 315);
   textAlign(BOTTOM);
   text(nombres, 150, 350);
   text(statements, 130, 370);
+}
+
+function drawVenusLeft () {
+    // VENUS SIGN ON LEFT
+  push();
+  fill("pink");
+  circle(40, 40, 50);
+
+  fill(255, 0, 128);
+  circle(40, 40, 35);
+
+  fill("pink");
+  rect(20, 80, 40, 9);
+  rect(35, 58, 10, 45);
+  pop();
+}
+
+function drawVenusRight(){
+     push();
+  fill("pink");
+  circle(360, 40, 50);
+
+   fill(255, 0, 128);
+  circle(360, 40, 35);
+
+  fill("pink");
+  rect(340, 80, 40, 9);
+  rect(355, 58, 10, 45);
+  pop();
 }
