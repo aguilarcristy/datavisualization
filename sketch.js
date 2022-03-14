@@ -48,6 +48,11 @@ function draw() {
 
 }
 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
 function mousePressed() {
   mr = int(random(name.length));
   br = int(random(question.length));
