@@ -1,3 +1,5 @@
+let value = 0; // Clouds Key
+
 let name = [
   "Ingrid Escadilla",
   "Alicia Cortes",
@@ -27,6 +29,7 @@ let rc = 20;
 let gc = 100;
 let bc = 250;
 
+
 let nombres;
 let statements;
 
@@ -37,26 +40,41 @@ function setup() {
   intText();
   fortBall();
   console.log(name[int(random(name.length))]);
-  // random whole number list of moods :DD
   console.log(question.length);
+
+
 }
 
 function draw() {
+  drawVenus();
+ // drawBottomDecor();
 
- drawVenusLeft();
- drawVenusRight();
+ // Clouds
+
+  fill(value);
+
+  circle(400, 400, 100);
+  circle(355, 400, 60);
+  circle(330, 400, 35);
+  circle(310, 400, 20);
+  circle(295, 400, 12);
+  noStroke();
+
+
+  // Left Cloud
+  circle(0, 400, 100);
+  circle(45, 400, 60);
+  circle(70, 400, 35);
+  circle(90, 400, 20);
+  circle(105, 400, 12);
+  noStroke();
+
 
 }
-
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 
 function mousePressed() {
   mr = int(random(name.length));
   br = int(random(question.length));
-  //nombres = name[mr]  + ' ' + question[br] + '.';
   nombres = name[mr];
   statements = question[mr];
   rc = random(255);
@@ -87,7 +105,6 @@ function fortBall2() {
 function intText() {
   fill(255);
   textAlign(TOP);
-  //this is a lie, you can click anywhere
   text("Women who deserved to live", 130, 30);
 }
 
@@ -103,27 +120,27 @@ function fortText() {
   text(statements, 130, 370);
 }
 
-function drawVenusLeft () {
-    // VENUS SIGN ON LEFT
+function drawVenus() {
+  // Venus Left
   push();
   fill("pink");
   circle(40, 40, 50);
 
-  fill(255, 0, 128);
+  //fill(255, 0, 128);
+  fill(0);
   circle(40, 40, 35);
 
   fill("pink");
   rect(20, 80, 40, 9);
   rect(35, 58, 10, 45);
-  pop();
-}
 
-function drawVenusRight(){
-     push();
+  // Venus Right
+
   fill("pink");
   circle(360, 40, 50);
 
-   fill(255, 0, 128);
+ // fill(255, 0, 128);
+  fill(0);
   circle(360, 40, 35);
 
   fill("pink");
@@ -131,3 +148,30 @@ function drawVenusRight(){
   rect(355, 58, 10, 45);
   pop();
 }
+
+function keyPressed() {
+  if (value === 0) {
+    value = 255;
+  } else {
+    value = 0;
+  }
+}
+
+//function drawBottomDecor() {
+
+
+  fill(255, 122, 169);
+  // Right Cloud
+  circle(400, 400, 100);
+  circle(355, 400, 60);
+  circle(330, 400, 35);
+  circle(310, 400, 20);
+  circle(295, 400, 12);
+
+
+  // Left Cloud
+  circle(0, 400, 100);
+  circle(45, 400, 60);
+  circle(70, 400, 35);
+  circle(90, 400, 20);
+  circle(105, 400, 12);
