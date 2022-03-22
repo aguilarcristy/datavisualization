@@ -34,7 +34,9 @@ let nombres;
 let statements;
 
 function setup() {
-  createCanvas(400, 400);
+
+let canvas= createCanvas(400,400);
+canvas.parent('myCanvas');
   background(255, 0, 128);
   frameRate(60);
   intText();
