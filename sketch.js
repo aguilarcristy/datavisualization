@@ -10,19 +10,19 @@ let name = [
   "Abigail Guerrero Mondragon",
   "Isabel Cabanillas de la Torre",
 ];
-let question = [
+//let question = [
   "When will this stop?",
   "No more deaths",
   "Hold men accountable",
   "Protect our women",
   "Women are deserving of life",
   "Machismo kills",
-  "No more femicides",
-];
+  "No more femicides"
+
 
 let mr;
 let gr;
-let br;
+//let br;
 let sr;
 
 let rc = 20;
@@ -31,18 +31,17 @@ let bc = 250;
 
 
 let nombres;
-let statements;
+//let statements;
 
 function setup() {
-
-let canvas= createCanvas(400,400);
+  let canvas= createCanvas(400,400);
 canvas.parent('myCanvas');
   background(255, 0, 128);
   frameRate(60);
   intText();
   fortBall();
   console.log(name[int(random(name.length))]);
-  console.log(question.length);
+ // console.log(question.length);
 
 
 }
@@ -76,14 +75,14 @@ function draw() {
 
 function mousePressed() {
   mr = int(random(name.length));
-  br = int(random(question.length));
+ // br = int(random(question.length));
   nombres = name[mr];
-  statements = question[mr];
+//  statements = question[mr];
   rc = random(255);
   bc = random(255);
   fortText();
   console.log(nombres);
-  console.log(statements);
+//  console.log(statements);
 }
 
 function fortBall() {
@@ -119,7 +118,7 @@ function fortText() {
   text("Rest in Peace", 160, 315);
   textAlign(BOTTOM);
   text(nombres, 150, 350);
-  text(statements, 130, 370);
+ // text(statements, 130, 370);
 }
 
 function drawVenus() {
@@ -162,7 +161,7 @@ function keyPressed() {
 //function drawBottomDecor() {
 
 
-  fill(255, 122, 169);
+ // fill(255, 122, 169);
   // Right Cloud
   circle(400, 400, 100);
   circle(355, 400, 60);
