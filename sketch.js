@@ -9,6 +9,10 @@ let name = [
   "Fernanda Castilla Miranda",
   "Abigail Guerrero Mondragon",
   "Isabel Cabanillas de la Torre",
+  "Velma Rubi",
+  "Elideth Andrea",
+  "Cynthia G. Angeles",
+  "Juana Dalia S.",
 ];
 //let question = [
   "When will this stop?",
